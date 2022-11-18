@@ -18,19 +18,22 @@
         <div class="message">${message}</div>
         <div class="item">
             <input type="text" name="userName" required>
-            <label for="">用户名</label>
+            <label>用户名</label>
         </div>
         <div class="item">
             <input type="password" name="userPassword" required>
-            <label for="">密码</label>
+            <label>密码</label>
         </div>
-        <button class="btn">登录
-        </button>
-        <a href="/template/HomePage.jsp" class="tourist">游客进入
+        <input type="submit" value="登录" class="btn">
+<%--        <button class="btn">登录</button>--%>
+        <a href="/template/user/HomePage.jsp" class="tourist">游客进入
         </a>
         <a href="/register.jsp" class="register">注册
         </a>
     </form>
 </div>
 </body>
+<script>
+
+</script>
 </html>

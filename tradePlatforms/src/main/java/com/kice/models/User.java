@@ -1,19 +1,29 @@
 package com.kice.models;
 
+import java.util.Date;
+
 public class User {
-    private int userID;
-    private String userName;
-    private String userPassword;
-    private int userRole;
+    private int userID;               // 用户ID
+    private String userName;          // 用户名
+    private String userPassword;      // 用户密码
+    private int userPhone;            // 用户手机号
+    private Date useRegistrationTime; // 用户注册时间
+    private int userRoleId;           // 用户身份标识码
+
+    public User(int userID, String userName, String userPassword, int userPhone, Date useRegistrationTime, int userRoleId) {
+        this.userID = userID;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.useRegistrationTime = useRegistrationTime;
+        this.userRoleId = userRoleId;
+    }
 
     public User() {
     }
 
-    public User(int userID, String userName, String userPassword, int userRole) {
+    public User(int userID) {
         this.userID = userID;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.userRole = userRole;
     }
 
     public int getUserID() {
@@ -40,12 +50,28 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    public int getUserRole() {
-        return userRole;
+    public int getUserPhone() {
+        return userPhone;
     }
 
-    public void setUserRole(int userRole) {
-        this.userRole = userRole;
+    public void setUserPhone(int userPhone) {
+        this.userPhone = userPhone;
+    }
+
+    public Date getUseRegistrationTime() {
+        return useRegistrationTime;
+    }
+
+    public void setUseRegistrationTime(Date useRegistrationTime) {
+        this.useRegistrationTime = useRegistrationTime;
+    }
+
+    public int getUserRoleId() {
+        return userRoleId;
+    }
+
+    public void setUserRoleId(int userRoleId) {
+        this.userRoleId = userRoleId;
     }
 
     @Override
@@ -54,7 +80,9 @@ public class User {
                 "userID=" + userID +
                 ", userName='" + userName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
-                ", userRole=" + userRole +
+                ", userPhone=" + userPhone +
+                ", useRegistrationTime=" + useRegistrationTime +
+                ", userRoleId=" + userRoleId +
                 '}';
     }
 }

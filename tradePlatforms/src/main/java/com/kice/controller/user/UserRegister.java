@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class RegisterServlet extends HttpServlet {
+public class UserRegister extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -28,8 +28,10 @@ public class RegisterServlet extends HttpServlet {
                 req.setAttribute(Constants.MESSAGE, "确认密码错误");
                 req.getRequestDispatcher("register.jsp").forward(req, resp);
             } else {
-                req.setAttribute(Constants.MESSAGE, "Success");
-                //todo: 前端弹窗提示
+                if (userService.registerUser(userName, password)) {
+                    req.setAttribute(Constants.MESSAGE, "Success");
+                    req.getRequestDispatcher("login.jsp").forward(req, resp);
+                }
             }
         }
     }

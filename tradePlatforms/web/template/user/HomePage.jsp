@@ -11,6 +11,6 @@
     <title>二手交易平台</title>
 </head>
 <body>
-<h1>主页</h1>
+<h1>用户主页</h1>
 </body>
 </html>

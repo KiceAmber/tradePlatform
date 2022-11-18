@@ -14,27 +14,31 @@
 <body>
 <div class="loginBox">
     <h2>欢迎注册用户</h2>
-    <form action="/register">
+    <form action="/register" method="post">
         <div class="message">${message}</div>
         <div class="item">
             <input type="text" name="userName" required>
-            <label for="">用户名</label>
+            <label>用户名</label>
         </div>
         <div class="item">
             <input type="password" name="userPassword" required>
-            <label for="">密码</label>
+            <label>密码</label>
         </div>
         <div class="item">
             <input type="password" name="rePassword" required>
-            <label for="">确认密码</label>
+            <label>确认密码</label>
         </div>
-        <button class="btn">登录
-        </button>
-        <a href="/template/HomePage.jsp" class="tourist">游客进入
-        </a>
-        <a href="/register.jsp" class="register">注册
-        </a>
+        <input type="submit" value="注册" class="btn">
+        <input type="hidden" name="message" id="message" value="${msg}">
+        <a href="/template/user/HomePage.jsp" class="tourist">游客进入</a>
     </form>
 </div>
 </body>
+<script>
+    let msg = $("#msg").val();
+    if (msg === "success") {
+        alert("注册成功!!!")
+
+    }
+</script>
 </html>
