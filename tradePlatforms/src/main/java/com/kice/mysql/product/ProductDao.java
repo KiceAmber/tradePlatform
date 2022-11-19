@@ -17,4 +17,14 @@ public interface ProductDao {
      *
      */
     int addProduct(Connection connection, Product product);
+
+    /**
+     * 修改商品信息
+     */
+    int modifyProduct(Connection connection, Product product);
+
+    /**
+     * 下架商品
+     */
+    int deleteProduct(Connection connection, int productId);
 }

@@ -1,4 +1,4 @@
-package com.kice.controller.user;
+package com.kice.controller;
 
 import com.kice.common.Constants;
 import com.kice.service.user.UserServiceImpl;
@@ -30,7 +30,7 @@ public class UserRegister extends HttpServlet {
             } else {
                 if (userService.registerUser(userName, password)) {
                     req.setAttribute(Constants.MESSAGE, "Success");
-                    req.getRequestDispatcher("login.jsp").forward(req, resp);
+                    resp.sendRedirect("/login.jsp");
                 }
             }
         }

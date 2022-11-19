@@ -14,7 +14,7 @@
 <body>
 <div class="loginBox">
     <h2>二手交易系统</h2>
-    <form action="/login" method="post">
+    <form action="user/login" method="post">
         <div class="message">${message}</div>
         <div class="item">
             <input type="text" name="userName" required>

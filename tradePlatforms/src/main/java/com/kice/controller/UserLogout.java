@@ -1,23 +1,22 @@
-package com.kice.controller.user;
+package com.kice.controller;
 
-import com.kice.models.User;
-import com.kice.service.user.UserServiceImpl;
+import com.kice.common.Constants;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class QueryAllUser extends HttpServlet {
+public class UserLogout extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserServiceImpl userService = new UserServiceImpl();
-        List<User> userList = new ArrayList<>();
-        userList = userService.queryAllUser();
-        req.setAttribute("userList", userList);
+        // 去除Session中的属性
+        if (req.getSession().getAttribute(Constants.USER_SESSION) != null) {
+            req.getSession().removeAttribute(Constants.USER_SESSION);
+        }
+        // 跳转到登录界面
+        req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 
     @Override
@@ -25,19 +24,3 @@ public class QueryAllUser extends HttpServlet {
         doGet(req, resp);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

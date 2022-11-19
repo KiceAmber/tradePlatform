@@ -61,4 +61,17 @@ public class ProductDaoImpl implements ProductDao{
         }
         return row;
     }
+
+    @Override
+    public int modifyProduct(Connection connection, Product product) {
+
+        // TODO: 修改商品信息
+        return 1;
+    }
+
+    @Override
+    public int deleteProduct(Connection connection, int productId) {
+        // TODO: 下架商品
+        return 1;
+    }
 }

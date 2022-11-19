@@ -14,7 +14,7 @@
 <body>
 <div class="loginBox">
     <h2>欢迎注册用户</h2>
-    <form action="/register" method="post">
+    <form action="user/register" method="post">
         <div class="message">${message}</div>
         <div class="item">
             <input type="text" name="userName" required>
@@ -29,16 +29,8 @@
             <label>确认密码</label>
         </div>
         <input type="submit" value="注册" class="btn">
-        <input type="hidden" name="message" id="message" value="${msg}">
         <a href="/template/user/HomePage.jsp" class="tourist">游客进入</a>
     </form>
 </div>
 </body>
-<script>
-    let msg = $("#msg").val();
-    if (msg === "success") {
-        alert("注册成功!!!")
-
-    }
-</script>
 </html>

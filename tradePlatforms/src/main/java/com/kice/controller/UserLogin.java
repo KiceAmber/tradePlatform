@@ -1,4 +1,4 @@
-package com.kice.controller.user;
+package com.kice.controller;
 
 import com.kice.common.Constants;
 import com.kice.models.User;
@@ -24,9 +24,9 @@ public class UserLogin extends HttpServlet {
         if (user != null) {
             // 如果是管理员
             if (user.getUserName().equals("admin") && user.getUserPassword().equals("admin") && user.getUserRoleId() == 0) {
-                path = "template/admin/adminHome.jsp";
+                path = "/template/admin/userManage.jsp";
             } else {
-                path = "template/user/HomePage.jsp";
+                path = "/template/user/HomePage.jsp";
             }
             req.getSession().setAttribute(Constants.USER_SESSION, user);
             // 重定向跳转到主页面
