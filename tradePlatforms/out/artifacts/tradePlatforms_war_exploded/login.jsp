@@ -25,7 +25,6 @@
             <label>密码</label>
         </div>
         <input type="submit" value="登录" class="btn">
-<%--        <button class="btn">登录</button>--%>
         <a href="/template/user/HomePage.jsp" class="tourist">游客进入
         </a>
         <a href="/register.jsp" class="register">注册

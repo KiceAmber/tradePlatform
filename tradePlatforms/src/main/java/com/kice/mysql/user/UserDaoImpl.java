@@ -76,7 +76,7 @@ public class UserDaoImpl implements UserDao{
         if (connection != null) {
             rs = database.execute(connection, sql, params, rs, pre);
             try {
-                if(rs.next()){
+                while (rs.next()) {
                     User user = new User();
                     user.setUserID(rs.getInt("user_id"));
                     user.setUserName(rs.getString("user_name"));
@@ -112,5 +112,22 @@ public class UserDaoImpl implements UserDao{
             database.closeConn(connection, pre, rs);
         }
         return row;
+    }
+
+    @Override
+    public User queryUserByName(Connection connection, String userName, String userId) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        User user = null;
+        int row = 0;
+        Object[] params = {};
+
+        if (connection != null) {
+            String sql = "select * from tradeplatform.user where user_name like ?";
+            if
+            row = database.update(connection, sql, params, row, pre);
+            database.closeConn(connection, pre, rs);
+        }
+        return user;
     }
 }

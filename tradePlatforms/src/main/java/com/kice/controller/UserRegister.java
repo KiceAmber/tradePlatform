@@ -1,6 +1,7 @@
 package com.kice.controller;
 
 import com.kice.common.Constants;
+import com.kice.service.user.UserService;
 import com.kice.service.user.UserServiceImpl;
 
 import javax.servlet.ServletException;
@@ -13,7 +14,7 @@ public class UserRegister extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UserServiceImpl userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         String userName = req.getParameter("userName");
         String password = req.getParameter("userPassword");

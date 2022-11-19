@@ -1,0 +1,47 @@
+.header{
+    height: 46px;
+    width: 100%;
+    padding: 3px 30px;
+    margin: 5px auto;
+    background-color: #bdbbbb;
+}
+.header h2{
+    display: inline;
+}
+.header>a{
+    height: 20px;
+    width: 72px;
+    display: inline;
+    line-height: 37px;
+    text-align: center;
+    float: right;
+}
+li{
+height: 30px;
+width: 150px;
+display: inline;
+background-color: rgba(118, 115, 115, 0.35);
+float: right;
+}
+.body{
+width: 500px;
+height: 500px;
+background-color: #bdbbbb;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+border-radius: 10px;
+}
+.body table{
+width: 350px;
+height: 300px;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;        
+}

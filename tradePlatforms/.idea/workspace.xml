@@ -10,36 +10,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27363ee-e8e6-4621-93c5-d21486b5809a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/comment/CommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/comment/CommentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/css/productManage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/css/sortManage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/css/userManage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/admin/productManage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/admin/sortManage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/admin/userManage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/sort/SortDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/sort/SortDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/sort/SortService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/sort/SortServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/HomePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/buy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/sell.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/banner_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/dianzan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/hezi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/jiaoyi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/new_goods_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/admin/adminAddSort.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/user/buy.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/user/sell.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cabee399-9e51-40cf-8541-c2da0602272e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cabee399-9e51-40cf-8541-c2da0602272e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/user/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/user/LogoutServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/user/QueryAllUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/user/RegisterServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Sort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/common/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/user/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/user/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/AddProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/QueryAllProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/QueryAllUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/UserLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/userManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/admin/productManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/admin/productManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/admin/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/admin/userManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/user/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user/HomePage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -97,11 +111,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Project/java/tradePlatforms/tradePlatforms/web/static/images",
+    "last_opened_file_path": "D:/Project/java/tradePlatforms/tradePlatforms/web/template/user",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.1442036",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "settings.editor.splitter.proportion": "0.27014217"
   },
   "keyToStringList": {
@@ -112,11 +126,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\user" />
+      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\css" />
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\images" />
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\admin" />
-      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\css" />
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web" />
-      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\user" />
@@ -251,7 +265,8 @@
       <workItem from="1668741324921" duration="56000" />
       <workItem from="1668780919710" duration="1114000" />
       <workItem from="1668819933560" duration="3772000" />
-      <workItem from="1668846805688" duration="2257000" />
+      <workItem from="1668846805688" duration="4541000" />
+      <workItem from="1668855922822" duration="7850000" />
     </task>
     <servers />
   </component>

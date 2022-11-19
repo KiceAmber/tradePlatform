@@ -54,7 +54,7 @@ public class ProductDaoImpl implements ProductDao{
                             product.getProductName(), product.getProductPrice(), product.getProductImage(),
                               product.getProductCommentCount(), product.getProductViewCount()};
         int row = 0;
-        String sql = "insert into tradeplatform.product() values(?, ?, ?, ?, ?, ?)";
+        String sql = "insert into tradeplatform.product() values(?, ?, ?, ?, ?, ?, ?, ?)";
         if (connection != null) {
             row = database.update(connection, sql, params, row, pre);
             database.closeConn(connection, pre, rs);

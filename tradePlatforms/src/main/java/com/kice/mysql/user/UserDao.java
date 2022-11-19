@@ -33,6 +33,16 @@ public interface UserDao {
     /**
      * 注册用户
      * @param connection 数据库连接
+     *
      */
     int RegisterUser(Connection connection, String username, String password);
+
+
+    /**
+     * 根据用户名查询用户
+     * @param connection 数据库连接
+     * @param userName 用户名
+     * @param userId 用户ID
+     */
+    User queryUserByName(Connection connection, String userName, String userId);
 }

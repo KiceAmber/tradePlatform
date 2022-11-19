@@ -1,3 +1,6 @@
+<%@ page import="com.kice.models.User" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.kice.common.Constants" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
@@ -40,25 +43,28 @@
 				<tr>
 					<th><img src="/static/images/list.png" width="25" height="25"></th>
 					<th>用户ID</th>
-					<th>身份ID</th>
+					<th>身份ID(0-管理员 1-用户)</th>
 					<th>用户名</th>
 					<th>手机号</th>
 					<th>注册时间</th>
 					<th>操作</th>
 				</tr>
-				<tr>
-					<td><img src="/static/images/list.png" width="25" height="25"></td>
-					<td>1</td>
-					<td>0</td>
-					<td>suchengao</td>
-					<td>13327617990</td>
-					<td>2022-11-5</td>
-					<td><a
-						href="./userManage.jsp">删除</a>
-					</td>
-				</tr>
+				<c:forEach items="${user_list}" var="user">
+					<tr>
+						<td><img src="/static/images/list.png" width="25" height="25"></td>
+						<td>${user.userID}</td>
+						<td>${user.userRoleId}</td>
+						<td>${user.userName}</td>
+						<td>${user.userPhone}</td>
+						<td>${user.useRegistrationTime}</td>
+						<td><a href="./userManage.jsp">删除</a></td>
+					</tr>
+				</c:forEach>
 			</table>
 		</div>
 	</div>
 </body>
+<script>
+
+</script>
 </html>

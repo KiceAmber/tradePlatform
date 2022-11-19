@@ -1,6 +1,5 @@
 package com.kice.controller;
 
-import com.kice.models.User;
 import com.kice.service.user.UserService;
 import com.kice.service.user.UserServiceImpl;
 
@@ -9,18 +8,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class QueryAllUser extends HttpServlet {
+public class QueryUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService userService = new UserServiceImpl();
+        String userName = req.getParameter("userName");
+        String userId = req.getParameter("userId");
 
+        if (!(userId.equals("") && userName.equals(""))) {
 
-        List<User> userList = new ArrayList<>();
-        userList = userService.queryAllUser();
-        req.setAttribute("userList", userList);
+        } else if (!userName.equals("")){
+
+        } else if (!userId.equals("")){
+
+        } else {
+            userService.queryAllUser();
+        }
+        req.getRequestDispatcher("/template/admin/userManage.jsp").forward(req, resp);
     }
 
     @Override
@@ -28,19 +33,3 @@ public class QueryAllUser extends HttpServlet {
         doGet(req, resp);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
