@@ -42,7 +42,18 @@ public interface UserDao {
      * 根据用户名查询用户
      * @param connection 数据库连接
      * @param userName 用户名
-     * @param userId 用户ID
      */
-    User queryUserByName(Connection connection, String userName, String userId);
+    List<User> queryUserByName(Connection connection, String userName);
+
+    /**
+     * 根据用户ID查询用户
+     * @param connection 数据库连接
+     * @paran userId 用户ID
+     */
+    List<User> queryUserById(Connection connection, String userId);
+
+    /**
+     * 根据用户ID和用户名查询用户
+     */
+    List<User> queryUserByNameAndId(Connection connection, String userName, String userId);
 }

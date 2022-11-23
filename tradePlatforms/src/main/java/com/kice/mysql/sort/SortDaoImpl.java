@@ -50,4 +50,30 @@ public class SortDaoImpl implements SortDao{
         }
         return row;
     }
+
+    @Override
+    public List<Sort> queryAllSort(Connection connection) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        Object[] params = {};
+        List<Sort> sortList = new ArrayList<>();
+        String sql = "select * from sort";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    Sort sort = new Sort();
+                    sort.setSortID(rs.getInt("sort_id"));
+                    sort.setSortName(rs.getString("sort_name"));
+                    sortList.add(sort);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                database.closeConn(connection, pre, rs);
+            }
+
+        }
+        return sortList;
+    }
 }

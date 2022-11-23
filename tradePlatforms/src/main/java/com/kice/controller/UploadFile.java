@@ -1,24 +1,22 @@
 package com.kice.controller;
 
-import com.kice.models.User;
-import com.kice.service.user.UserService;
-import com.kice.service.user.UserServiceImpl;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class QueryAllUser extends HttpServlet {
+public class UploadFile extends HttpServlet  {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserService userService = new UserServiceImpl();
-        List<User> userList = new ArrayList<>();
-        userList = userService.queryAllUser();
-        req.setAttribute("userList", userList);
+        // 文件保存路径
+        String uploadPath = this.getServletContext().getRealPath("/WEB-INF/upload");
+        File uploadFile = new File(uploadPath);
+        if (!uploadFile.exists()){
+            //如果没有这个文件，创建这个文件
+            uploadFile.mkdir();
+        }
     }
 
     @Override
@@ -26,19 +24,3 @@ public class QueryAllUser extends HttpServlet {
         doGet(req, resp);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

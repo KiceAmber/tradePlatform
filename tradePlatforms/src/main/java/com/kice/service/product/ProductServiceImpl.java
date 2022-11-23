@@ -1,6 +1,7 @@
 package com.kice.service.product;
 
 import com.kice.models.Product;
+import com.kice.models.User;
 import com.kice.mysql.database;
 import com.kice.mysql.product.ProductDao;
 import com.kice.mysql.product.ProductDaoImpl;
@@ -30,5 +31,23 @@ public class ProductServiceImpl implements ProductService{
             flag = true;
         }
         return flag;
+    }
+
+    @Override
+    public List<Product> queryByName(String productName) {
+        Connection connection = database.getConn();
+        return productDao.queryByName(connection, productName);
+    }
+
+    @Override
+    public List<Product> queryBySort(String sortName) {
+        Connection connection = database.getConn();
+        return productDao.queryBySort(connection, sortName);
+    }
+
+    @Override
+    public List<Product> queryByNameAndSort(String username, String userId) {
+        Connection connection = database.getConn();
+        return productDao.queryByNameAndSort(connection, username, userId);
     }
 }

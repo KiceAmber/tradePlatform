@@ -4,6 +4,7 @@ import com.kice.common.Constants;
 import com.kice.models.Sort;
 
 import java.sql.Connection;
+import java.util.List;
 
 public interface SortDao {
 
@@ -16,4 +17,9 @@ public interface SortDao {
      * 添加分类
      */
     int addSort(Connection connection, String sortName);
+
+    /**
+     * 查询所有分类
+     */
+    List<Sort> queryAllSort(Connection connection);
 }

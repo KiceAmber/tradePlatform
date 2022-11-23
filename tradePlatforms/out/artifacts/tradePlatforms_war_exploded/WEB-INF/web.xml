@@ -47,25 +47,67 @@
         <url-pattern>/user/logout</url-pattern>
     </servlet-mapping>
 
-<!--    &lt;!&ndash; 管理员查询所有商品&ndash;&gt;-->
-<!--    <servlet>-->
-<!--        <servlet-name>queryAllProduct</servlet-name>-->
-<!--        <servlet-class>com.kice.controller.QueryAllProduct</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>queryAllProduct</servlet-name>-->
-<!--        <url-pattern>admin/queryAllProduct</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <!-- 管理员查询所有用户-->
+    <servlet>
+        <servlet-name>queryAllUser</servlet-name>
+        <servlet-class>com.kice.controller.QueryAllUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryAllUser</servlet-name>
+        <url-pattern>/admin/queryAllUser</url-pattern>
+    </servlet-mapping>
 
-<!--    &lt;!&ndash; 管理员查询所有用户&ndash;&gt;-->
-<!--    <servlet>-->
-<!--        <servlet-name>queryAllUser</servlet-name>-->
-<!--        <servlet-class>com.kice.controller.QueryAllUser</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>queryAllUser</servlet-name>-->
-<!--        <url-pattern>admin/queryAllUser</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <!-- 管理员查询用户-->
+    <servlet>
+        <servlet-name>queryUser</servlet-name>
+        <servlet-class>com.kice.controller.QueryUserByNameOrId</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryUser</servlet-name>
+        <url-pattern>/admin/queryUser</url-pattern>
+    </servlet-mapping>
+
+    <!-- 管理员查询所有商品-->
+    <servlet>
+        <servlet-name>queryAllProduct</servlet-name>
+        <servlet-class>com.kice.controller.QueryAllProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryAllProduct</servlet-name>
+        <url-pattern>/admin/queryAllProduct</url-pattern>
+    </servlet-mapping>
+
+    <!-- 管理员查询商品-->
+    <servlet>
+        <servlet-name>queryProduct</servlet-name>
+        <servlet-class>com.kice.controller.QueryProductByNameOrSort</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryProduct</servlet-name>
+        <url-pattern>/admin/queryProduct</url-pattern>
+    </servlet-mapping>
+
+    <!-- 管理员查询所有分类-->
+    <servlet>
+        <servlet-name>queryAllSort</servlet-name>
+        <servlet-class>com.kice.controller.QueryAllProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryAllSort</servlet-name>
+        <url-pattern>/admin/queryAllSort</url-pattern>
+    </servlet-mapping>
+
+    <!-- 管理员查询分类-->
+    <servlet>
+        <servlet-name>querySort</servlet-name>
+        <servlet-class>com.kice.controller.QueryProductByNameOrSort</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>querySort</servlet-name>
+        <url-pattern>/admin/querySort</url-pattern>
+    </servlet-mapping>
+
+
 
 <!--    &lt;!&ndash; 用户添加商品&ndash;&gt;-->
 <!--    <servlet>-->
@@ -77,16 +119,6 @@
 <!--        <url-pattern>user/addProduct</url-pattern>-->
 <!--    </servlet-mapping>-->
 
-    <!-- 用户跳转至添加商品-->
-<!--    <servlet>-->
-<!--        <servlet-name>goToAddProduct</servlet-name>-->
-<!--        <servlet-class>com.kice.controller.QueryAllProduct</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>goToAddProduct</servlet-name>-->
-<!--        <url-pattern>user/goToAddProduct</url-pattern>-->
-<!--    </servlet-mapping>-->
-
     <!-- 用户查询自己的所有商品-->
     <!--    <servlet>-->
     <!--        <servlet-name>queryOwnerProduct</servlet-name>-->
@@ -96,13 +128,6 @@
     <!--        <servlet-name>queryOwnerProduct</servlet-name>-->
     <!--        <url-pattern>user/ownerProduct</url-pattern>-->
     <!--    </servlet-mapping>-->
-
-
-
-
-
-
-
 
 
 

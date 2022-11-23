@@ -32,4 +32,20 @@ public interface ProductDao {
      * @param productId 商品ID
      */
     int deleteProduct(Connection connection, int productId);
+
+    /**
+     * 通过名称查询商品
+     * @
+     */
+    List<Product> queryByName(Connection connection, String productName);
+
+    /**
+     * 通过分类查询商品
+     */
+    List<Product> queryBySort(Connection connection, String sortName);
+
+    /**
+     * 通过名称和分类查询商品
+     */
+    List<Product> queryByNameAndSort(Connection connection, String productName, String sortName);
 }

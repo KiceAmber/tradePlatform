@@ -74,4 +74,92 @@ public class ProductDaoImpl implements ProductDao{
         // TODO: 下架商品
         return 1;
     }
+
+    @Override
+    public List<Product> queryByName(Connection connection, String productName) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        List<Product> productList = new ArrayList<>();
+        Object[] params = {"%"+productName+"%"};
+        String sql = "select * from tradeplatform.product where product_name like ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    Product product = new Product();
+                    product.setProductID(rs.getInt("product_id"));
+                    product.setProductName(rs.getString("product_name"));
+                    product.setProductPrice(rs.getInt("product_price"));
+                    product.setProductImage(rs.getString("product_image"));
+                    product.setProductCommentCount(rs.getInt("product_comment_count"));
+                    product.setProductViewCount(rs.getInt("product_view_count"));
+                    productList.add(product);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+        }
+        return productList;
+    }
+
+    @Override
+    public List<Product> queryBySort(Connection connection, String sortName) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        List<Product> productList = new ArrayList<>();
+        Object[] params = {"%"+sortName+"%"};
+        String sql = "select * from tradeplatform.product where product.sort_id = sort.sort_id and product.sort_name like ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    Product product = new Product();
+                    product.setProductID(rs.getInt("product_id"));
+                    product.setProductName(rs.getString("product_name"));
+                    product.setProductPrice(rs.getInt("product_price"));
+                    product.setProductImage(rs.getString("product_image"));
+                    product.setProductCommentCount(rs.getInt("product_comment_count"));
+                    product.setProductViewCount(rs.getInt("product_view_count"));
+                    productList.add(product);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+        }
+        return productList;
+    }
+
+    @Override
+    public List<Product> queryByNameAndSort(Connection connection, String productName, String sortName) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        List<Product> productList = new ArrayList<>();
+        Object[] params = {"%"+sortName+"%", "%" + productName + "%"};
+        String sql = "select * from tradeplatform.product where product.sort_id = sort.sort_id and product.sort_name like ?" +
+                " and product_name like ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    Product product = new Product();
+                    product.setProductID(rs.getInt("product_id"));
+                    product.setProductName(rs.getString("product_name"));
+                    product.setProductPrice(rs.getInt("product_price"));
+                    product.setProductImage(rs.getString("product_image"));
+                    product.setProductCommentCount(rs.getInt("product_comment_count"));
+                    product.setProductViewCount(rs.getInt("product_view_count"));
+                    productList.add(product);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+        }
+        return productList;
+    }
 }

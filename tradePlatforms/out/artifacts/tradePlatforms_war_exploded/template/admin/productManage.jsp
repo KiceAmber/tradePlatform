@@ -16,9 +16,9 @@
 
 	<div class="nav">
 		<ul>
-			<li id='nav1'><a href="./userManage.jsp">用户管理</a></li>
-			<li id='nav2'><a href="./productManage.jsp">商品管理<br></a></li>
-			<li id='nav3'><a href="./sortManage.jsp">商品分类管理<br></a></li>
+			<li id='nav1'><a href="/admin/queryAllUser">用户管理</a></li>
+			<li id='nav2'><a href="/admin/queryAllProduct">商品管理<br></a></li>
+			<li id='nav3'><a href="/admin/queryAllSort">商品分类管理<br></a></li>
 		</ul>
 	</div>
 
@@ -45,15 +45,26 @@
 					<th>商品评论数</th>
 					<th>操作</th>
 				</tr>
-				<tr>
-					<td><img src="/static/images/list.png" width="25" height="25"></td>
-					<td>1</td>
-					<td>电脑</td>
-					<td>电子产品</td>
-					<td>5000元</td>
-					<td>2022</td>
-					<td><a href="./productManage.jsp">下架</a></td>
-				</tr>
+<%--				<tr>--%>
+<%--					<td><img src="/static/images/list.png" width="25" height="25"></td>--%>
+<%--					<td>1</td>--%>
+<%--					<td>电脑</td>--%>
+<%--					<td>电子产品</td>--%>
+<%--					<td>5000元</td>--%>
+<%--					<td>2022</td>--%>
+<%--					<td><a href="./productManage.jsp">下架</a></td>--%>
+<%--				</tr>--%>
+				<c:forEach items="${product_list}" var="product">
+					<tr>
+						<td><img src="/static/images/list.png" width="25" height="25"></td>
+						<td>${product.productID}</td>
+						<td>${product.productName}</td>
+						<td>${product.}</td> <!-- TODO: 商品分类-->
+						<td>${product.productPrice}</td>
+						<td>${product.productCommentCount}</td>
+						<td><a href="./userManage.jsp">删除</a></td>
+					</tr>
+				</c:forEach>
 			</table>
 		</div>
 	</div>

@@ -30,9 +30,6 @@ public class UserLogin extends HttpServlet {
                 path = "/template/admin/userManage.jsp";
                 List<User> userList;
                 userList = userService.queryAllUser();
-                for (User u : userList) {
-                    System.out.println(u);
-                }
                 req.getSession().setAttribute(Constants.USER_LIST, userList);
             } else {
                 path = "/template/user/HomePage.jsp";

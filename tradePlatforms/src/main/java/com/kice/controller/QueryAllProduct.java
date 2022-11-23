@@ -1,5 +1,6 @@
 package com.kice.controller;
 
+import com.kice.common.Constants;
 import com.kice.models.Product;
 import com.kice.models.User;
 import com.kice.service.product.ProductService;
@@ -18,9 +19,11 @@ public class QueryAllProduct extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductService productService = new ProductServiceImpl();
-        List<Product> productList = new ArrayList<>();
+        String path = "/template/admin/productManage.jsp";
+        List<Product> productList;
         productList = productService.queryAllProduct();
-        req.setAttribute("userList", productService);
+        req.setAttribute(Constants.PRODUCT_LIST, productList);
+        req.getRequestDispatcher(path).forward(req, resp);
     }
 
     @Override

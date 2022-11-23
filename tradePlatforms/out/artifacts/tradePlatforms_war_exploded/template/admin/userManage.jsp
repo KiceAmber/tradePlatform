@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
 	<div class="header">
 		<h3>欢迎来到二手交易后台管理</h3>
 		<a href="#">退出</a>
@@ -31,10 +30,9 @@
 			<p>用户列表显示</p>
 		</div>
 		<div class="contend2">
-			<form>
+			<form action="/admin/queryUser">
 				用户名:<input type="text" name="userName" /> 
-				用户ID:<input type="text" name="userId" /> 
-				手机:<input type="text" name="phoneNum" />
+				用户ID:<input type="text" name="userId" />
 				<input type="submit" value="查询" name='userSearch' id="search" />
 			</form>
 		</div>

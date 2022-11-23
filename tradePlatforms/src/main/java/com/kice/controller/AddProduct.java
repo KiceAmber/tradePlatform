@@ -1,5 +1,6 @@
 package com.kice.controller;
 
+import com.kice.common.Constants;
 import com.kice.models.Product;
 import com.kice.models.Sort;
 import com.kice.service.product.ProductService;
@@ -21,9 +22,9 @@ public class AddProduct extends HttpServlet {
         product.setProductPrice(Integer.parseInt(req.getParameter("productPrice")));
         product.setProductImage(req.getParameter("productImage"));
         if (productService.addProduct(product)) {
-
+            req.setAttribute(Constants.MESSAGE, "商品添加成功");
+            req.getRequestDispatcher("/").forward(req, resp);
         }
-
     }
 
     @Override

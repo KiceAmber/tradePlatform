@@ -21,8 +21,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public User userLogin(String userName, String userPassword) {
         Connection connection = null;
-        User user = null;
-
         connection = database.getConn();
         return userDao.userLogin(connection, userName, userPassword);
     }
@@ -47,5 +45,23 @@ public class UserServiceImpl implements UserService {
             flag = true;
         }
         return flag;
+    }
+
+    @Override
+    public List<User> queryById(String userId) {
+        Connection connection = database.getConn();
+        return userDao.queryUserById(connection, userId);
+    }
+
+    @Override
+    public List<User> queryByName(String username) {
+        Connection connection = database.getConn();
+        return userDao.queryUserByName(connection, username);
+    }
+
+    @Override
+    public List<User> queryByNameAndId(String username, String userId) {
+        Connection connection = database.getConn();
+        return userDao.queryUserByNameAndId(connection, username, userId);
     }
 }

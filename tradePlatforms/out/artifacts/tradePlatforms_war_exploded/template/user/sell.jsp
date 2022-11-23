@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: amber
@@ -39,9 +40,9 @@
       <tr>
         <td>商品类别：</td>
         <td><select name="goodsSort" id="">
-          <option value="书籍">书籍</option>
-          <option value="电器商品">电器商品</option>
-          <option value="化妆品">化妆品</option>
+          <c:forEach items="sort_list" var="sort">
+              <option value="${sort.sortName}">${sort.sortName}</option>
+          </c:forEach>
         </select></td>
       </tr>
       <tr>

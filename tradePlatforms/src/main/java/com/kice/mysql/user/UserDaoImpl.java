@@ -27,7 +27,7 @@ public class UserDaoImpl implements UserDao{
                     user.setUserID(rs.getInt("user_id"));
                     user.setUserName(rs.getString("user_name"));
                     user.setUserPassword(rs.getString("user_password"));
-                    user.setUserPhone(rs.getInt("user_phone"));
+                    user.setUserPhone(rs.getString("user_phone"));
                     user.setUseRegistrationTime(rs.getDate("user_registration_time"));
                     user.setUserRoleId(rs.getInt("user_role_id"));
                 }
@@ -81,7 +81,7 @@ public class UserDaoImpl implements UserDao{
                     user.setUserID(rs.getInt("user_id"));
                     user.setUserName(rs.getString("user_name"));
                     user.setUserPassword(rs.getString("user_password"));
-                    user.setUserPhone(rs.getInt("user_phone"));
+                    user.setUserPhone(rs.getString("user_phone"));
                     user.setUseRegistrationTime(rs.getDate("user_registration_time"));
                     user.setUserRoleId(rs.getInt("user_role_id"));
                     userList.add(user);
@@ -115,19 +115,93 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public User queryUserByName(Connection connection, String userName, String userId) {
+    public List<User> queryUserByName(Connection connection, String userName) {
         PreparedStatement pre = null;
         ResultSet rs = null;
-        User user = null;
-        int row = 0;
-        Object[] params = {};
-
+        List<User> userList = new ArrayList<>();
+        Object[] params = {"%"+userName+"%"};
+        String sql = "select * from tradeplatform.user where user_name like ?";
         if (connection != null) {
-            String sql = "select * from tradeplatform.user where user_name like ?";
-            if
-            row = database.update(connection, sql, params, row, pre);
-            database.closeConn(connection, pre, rs);
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    User user = new User();
+                    user.setUserID(rs.getInt("user_id"));
+                    user.setUserName(rs.getString("user_name"));
+                    user.setUserPassword(rs.getString("user_password"));
+                    user.setUserPhone(rs.getString("user_phone"));
+                    user.setUseRegistrationTime(rs.getDate("user_registration_time"));
+                    user.setUserRoleId(rs.getInt("user_role_id"));
+                    userList.add(user);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
         }
-        return user;
+        return userList;
+    }
+
+    @Override
+    public List<User> queryUserById(Connection connection, String userId) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        List<User> userList = new ArrayList<>();
+        Object[] params = {"%" + userId + "%"};
+        String sql = "select * from tradeplatform.user where user_id like ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    User user = new User();
+                    user = new User();
+                    user.setUserID(rs.getInt("user_id"));
+                    user.setUserName(rs.getString("user_name"));
+                    user.setUserPassword(rs.getString("user_password"));
+                    user.setUserPhone(rs.getString("user_phone"));
+                    user.setUseRegistrationTime(rs.getDate("user_registration_time"));
+                    user.setUserRoleId(rs.getInt("user_role_id"));
+                    userList.add(user);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+
+        }
+        return userList;
+    }
+
+    @Override
+    public List<User> queryUserByNameAndId(Connection connection, String userName, String userId) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        List<User> userList = new ArrayList<>();
+        Object[] params = {"%" + userName + "%", "%" + userId + "%"};
+        String sql = "select * from tradeplatform.user where user_name like ? and user_id like ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    User user = new User();
+                    user = new User();
+                    user.setUserID(rs.getInt("user_id"));
+                    user.setUserName(rs.getString("user_name"));
+                    user.setUserPassword(rs.getString("user_password"));
+                    user.setUserPhone(rs.getString("user_phone"));
+                    user.setUseRegistrationTime(rs.getDate("user_registration_time"));
+                    user.setUserRoleId(rs.getInt("user_role_id"));
+                    userList.add(user);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+
+        }
+        return userList;
     }
 }
