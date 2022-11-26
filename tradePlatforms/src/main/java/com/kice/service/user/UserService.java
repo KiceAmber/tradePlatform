@@ -27,4 +27,7 @@ public interface UserService{
     // 根据ID和用户名查询用户
     List<User> queryByNameAndId(String username, String userId);
 
+    // 修改用户信息
+    boolean modifyUser(String oldName, String newName, String userPhone, String password);
+
 }

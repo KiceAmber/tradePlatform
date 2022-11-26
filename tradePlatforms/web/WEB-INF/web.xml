@@ -20,7 +20,7 @@
     <!-- 用户注册-->
     <servlet>
         <servlet-name>register</servlet-name>
-        <servlet-class>com.kice.controller.UserRegister</servlet-class>
+        <servlet-class>com.kice.controller.user.UserRegister</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
@@ -30,17 +30,27 @@
     <!-- 用户登录-->
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>com.kice.controller.UserLogin</servlet-class>
+        <servlet-class>com.kice.controller.user.UserLogin</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
         <url-pattern>/user/login</url-pattern>
     </servlet-mapping>
 
+    <!-- 游客登录-->
+    <servlet>
+        <servlet-name>touristLogin</servlet-name>
+        <servlet-class>com.kice.controller.user.TouristLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>touristLogin</servlet-name>
+        <url-pattern>/tourist/login</url-pattern>
+    </servlet-mapping>
+
     <!-- 用户注销-->
     <servlet>
         <servlet-name>logout</servlet-name>
-        <servlet-class>com.kice.controller.UserLogout</servlet-class>
+        <servlet-class>com.kice.controller.user.UserLogout</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>logout</servlet-name>
@@ -50,7 +60,7 @@
     <!-- 管理员查询所有用户-->
     <servlet>
         <servlet-name>queryAllUser</servlet-name>
-        <servlet-class>com.kice.controller.QueryAllUser</servlet-class>
+        <servlet-class>com.kice.controller.user.QueryAllUser</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>queryAllUser</servlet-name>
@@ -60,7 +70,7 @@
     <!-- 管理员查询用户-->
     <servlet>
         <servlet-name>queryUser</servlet-name>
-        <servlet-class>com.kice.controller.QueryUserByNameOrId</servlet-class>
+        <servlet-class>com.kice.controller.user.QueryUserByNameOrId</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>queryUser</servlet-name>
@@ -70,7 +80,7 @@
     <!-- 管理员查询所有商品-->
     <servlet>
         <servlet-name>queryAllProduct</servlet-name>
-        <servlet-class>com.kice.controller.QueryAllProduct</servlet-class>
+        <servlet-class>com.kice.controller.product.QueryAllProduct</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>queryAllProduct</servlet-name>
@@ -80,7 +90,7 @@
     <!-- 管理员查询商品-->
     <servlet>
         <servlet-name>queryProduct</servlet-name>
-        <servlet-class>com.kice.controller.QueryProductByNameOrSort</servlet-class>
+        <servlet-class>com.kice.controller.product.QueryProductByNameOrSort</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>queryProduct</servlet-name>
@@ -90,7 +100,7 @@
     <!-- 管理员查询所有分类-->
     <servlet>
         <servlet-name>queryAllSort</servlet-name>
-        <servlet-class>com.kice.controller.QueryAllSort</servlet-class>
+        <servlet-class>com.kice.controller.sort.QueryAllSort</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>queryAllSort</servlet-name>
@@ -100,7 +110,7 @@
     <!-- 管理员查询分类-->
     <servlet>
         <servlet-name>querySort</servlet-name>
-        <servlet-class>com.kice.controller.QuerySortByName</servlet-class>
+        <servlet-class>com.kice.controller.sort.QuerySortByName</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>querySort</servlet-name>
@@ -110,7 +120,7 @@
     <!-- 个人中心跳转-->
     <servlet>
         <servlet-name>userInfo</servlet-name>
-        <servlet-class>com.kice.controller.DisplayUserInfo</servlet-class>
+        <servlet-class>com.kice.controller.user.DisplayUserInfo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>userInfo</servlet-name>
@@ -120,7 +130,7 @@
     <!-- 添加分类-->
     <servlet>
         <servlet-name>addSort</servlet-name>
-        <servlet-class>com.kice.controller.AddSort</servlet-class>
+        <servlet-class>com.kice.controller.sort.AddSort</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>addSort</servlet-name>
@@ -130,11 +140,61 @@
     <!-- 删除分类-->
     <servlet>
         <servlet-name>delSort</servlet-name>
-        <servlet-class>com.kice.controller.deleteSort</servlet-class>
+        <servlet-class>com.kice.controller.sort.deleteSort</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>delSort</servlet-name>
         <url-pattern>/admin/deleteSort</url-pattern>
+    </servlet-mapping>
+
+    <!-- 跳转到登录界面-->
+    <servlet>
+        <servlet-name>gotoLogin</servlet-name>
+        <servlet-class>com.kice.controller.user.GotoLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gotoLogin</servlet-name>
+        <url-pattern>/user/gotoLogin</url-pattern>
+    </servlet-mapping>
+
+    <!-- 跳转到注册界面-->
+    <servlet>
+        <servlet-name>gotoRegister</servlet-name>
+        <servlet-class>com.kice.controller.user.GotoRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gotoRegister</servlet-name>
+        <url-pattern>/user/gotoRegister</url-pattern>
+    </servlet-mapping>
+
+    <!-- 修改商品信息-->
+    <servlet>
+        <servlet-name>modifyProduct</servlet-name>
+        <servlet-class>com.kice.controller.product.ModifyProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modifyProduct</servlet-name>
+        <url-pattern>/user/modifyProduct</url-pattern>
+    </servlet-mapping>
+
+    <!-- 修改个人信息-->
+    <servlet>
+        <servlet-name>modifyUser</servlet-name>
+        <servlet-class>com.kice.controller.user.ModifyUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modifyUser</servlet-name>
+        <url-pattern>/user/modifyUser</url-pattern>
+    </servlet-mapping>
+
+    <!-- 下架商品-->
+    <servlet>
+        <servlet-name>deleteProduct</servlet-name>
+        <servlet-class>com.kice.controller.product.DeleteProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteProduct</servlet-name>
+        <url-pattern>/user/deleteProduct</url-pattern>
     </servlet-mapping>
 
 

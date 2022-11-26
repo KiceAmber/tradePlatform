@@ -17,8 +17,7 @@
 <div class="shortcut">
     <div class="wrapper">
         <ul>
-            <li><a href="#">登录</a></li>
-            <li><a href="#">注册</a></li>
+            <li><a href="/user/info">个人中心</a></li>
         </ul>
     </div>
 </div>
@@ -82,7 +81,7 @@
         <!-- body -->
         <div class="bd clearfix">
             <ul>
-                <c:forEach items="${sort.productList}" var="product">
+                <c:forEach items="${sort.productList}" var="product" begin="0" end="3">
                     <li>
                         <a href="#">
                             <img src="${product.productImage}" alt="">
@@ -124,5 +123,4 @@
     </div>
 </div>
 </body>
-
 </html>

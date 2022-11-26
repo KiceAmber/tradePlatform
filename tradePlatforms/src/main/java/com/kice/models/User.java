@@ -7,7 +7,7 @@ public class User {
     private int userID;               // 用户ID
     private String userName;          // 用户名
     private String userPassword;      // 用户密码
-    private String userPhone;            // 用户手机号
+    private String userPhone;         // 用户手机号
     private Date useRegistrationTime; // 用户注册时间
     private int userRoleId;           // 用户身份标识码
     private List<Product> productList; // 用户下的商品列表

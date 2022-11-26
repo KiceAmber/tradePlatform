@@ -14,7 +14,7 @@
 <body>
 <div class="loginBox">
     <h2>二手交易系统</h2>
-    <form action="user/login" method="post">
+    <form action="/user/login" method="post">
         <div class="message">${message}</div>
         <div class="item">
             <input type="text" name="userName" required>
@@ -25,7 +25,7 @@
             <label>密码</label>
         </div>
         <input type="submit" value="登录" class="btn">
-        <a href="/template/user/HomePage.jsp" class="tourist">游客进入
+        <a href="/tourist/login" class="tourist">游客进入
         </a>
         <a href="/register.jsp" class="register">注册
         </a>

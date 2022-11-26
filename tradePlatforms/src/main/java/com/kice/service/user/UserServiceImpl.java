@@ -64,4 +64,13 @@ public class UserServiceImpl implements UserService {
         Connection connection = database.getConn();
         return userDao.queryUserByNameAndId(connection, username, userId);
     }
+
+    @Override
+    public boolean modifyUser(String oldName, String newName, String userPhone, String password) {
+        Connection connection = database.getConn();
+        if (userDao.modifyUser(connection, oldName, newName, userPhone, password) > 0) {
+            return true;
+        }
+        return false;
+    }
 }

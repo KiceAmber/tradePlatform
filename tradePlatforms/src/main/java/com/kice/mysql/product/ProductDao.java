@@ -21,13 +21,6 @@ public interface ProductDao {
     int addProduct(Connection connection, String sortName, String userName,String productName, int productPrice, String productImage);
 
     /**
-     * 修改商品信息
-     * @param connection 数据库连接
-     * @param product 商品
-     */
-    int modifyProduct(Connection connection, Product product);
-
-    /**
      * 下架商品
      * @param connection 数据库连接
      * @param productId 商品ID
@@ -49,4 +42,14 @@ public interface ProductDao {
      * 通过名称和分类查询商品
      */
     List<Product> queryByNameAndSort(Connection connection, String productName, String sortName);
+
+    /**
+     * 查询用户售卖的商品
+     */
+    List<Product> queryByUserName(Connection connection, String userName);
+
+    /**
+     * 修改商品信息
+     */
+    int modifyProduct(Connection connection, String oldName, String newName, String newSort, String newPrice);
 }

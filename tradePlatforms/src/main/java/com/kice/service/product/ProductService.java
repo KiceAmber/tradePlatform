@@ -18,7 +18,16 @@ public interface ProductService {
     // 根据分类查询商品
     List<Product> queryBySort(String sortName);
 
-
     // 根据ID和商品名查询商品
     List<Product> queryByNameAndSort(String productName, String sortName);
+
+    /**
+     * 用户名下的商品
+     */
+    List<Product> queryByUserName(String userName);
+
+    /**
+     * 修改商品信息
+     */
+    boolean modifyProduct(String oldName, String newName, String newSort, String newPrice);
 }

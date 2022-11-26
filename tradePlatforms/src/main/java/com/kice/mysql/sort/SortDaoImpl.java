@@ -71,7 +71,6 @@ public class SortDaoImpl implements SortDao{
             }
 
         }
-        System.out.println(sortList.toString());
         return sortList;
     }
 
@@ -116,8 +115,6 @@ public class SortDaoImpl implements SortDao{
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            } finally {
-                database.closeConn(connection, pre, rs);
             }
         }
         return sort.getSortID();

@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 	<div class="header">
 		<h3>欢迎来到二手交易后台管理</h3>
 		<a href="/user/logout">退出</a>

@@ -61,4 +61,10 @@ public interface UserDao {
      * 根据用户名查询具体ID
      */
     int querySpecUser(Connection connection, String userName);
+
+    /**
+     * 修改用户个人信息
+     */
+    int modifyUser(Connection connection,String oldName, String newName, String userPhone, String userPassword);
+
 }

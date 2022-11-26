@@ -63,6 +63,10 @@ public class ProductDaoImpl implements ProductDao{
         int sortId = sortDao.querySpecSort(connection, sortName);
         // 查询到用户对应的ID
         int userId = userDao.querySpecUser(connection, userName);
+
+        if (sortId == 0 || userId == 0) {
+            return 0;
+        }
         PreparedStatement pre = null;
         ResultSet rs = null;
         Object[] params = {sortId, userId, productName, productPrice, productImage};
@@ -74,13 +78,6 @@ public class ProductDaoImpl implements ProductDao{
             database.closeConn(connection, pre, rs);
         }
         return row;
-    }
-
-    @Override
-    public int modifyProduct(Connection connection, Product product) {
-
-        // TODO: 修改商品信息
-        return 1;
     }
 
     @Override
@@ -123,12 +120,14 @@ public class ProductDaoImpl implements ProductDao{
         ResultSet rs = null;
         List<Product> productList = new ArrayList<>();
         Object[] params = {"%"+sortName+"%"};
-        String sql = "select * from tradeplatform.product where product.sort_id = sort.sort_id and product.sort_name like ?";
+        String sql = "select * from product, sort where product.sort_id = sort.sort_id and sort.sort_name like ?";
         if (connection != null) {
             rs = database.execute(connection, sql, params, rs, pre);
             try {
                 while(rs.next()) {
                     Product product = new Product();
+                    Sort sort = new Sort();
+                    sort.setSortName(rs.getString("sort_name"));
                     product.setProductID(rs.getInt("product_id"));
                     product.setProductName(rs.getString("product_name"));
                     product.setProductPrice(rs.getInt("product_price"));
@@ -172,5 +171,54 @@ public class ProductDaoImpl implements ProductDao{
             }
         }
         return productList;
+    }
+
+    @Override
+    public List<Product> queryByUserName(Connection connection, String userName) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        List<Product> productList = new ArrayList<>();
+        Object[] params = {userName};
+        String sql = "select * from user, product,sort where user.user_id = product.user_id and product.sort_id = sort.sort_id and  user_name = ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    Sort sort = new Sort();
+                    sort.setSortID(rs.getInt("sort_id"));
+                    sort.setSortName(rs.getString("sort_name"));
+                    Product product = new Product();
+                    product.setProductID(rs.getInt("product_id"));
+                    product.setProductName(rs.getString("product_name"));
+                    product.setSort(sort);
+                    product.setProductPrice(rs.getInt("product_price"));
+                    product.setProductCommentCount(rs.getInt("product_comment_count"));
+                    productList.add(product);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+        }
+        return productList;
+    }
+
+    @Override
+    public int modifyProduct(Connection connection, String oldName, String newName, String newSort, String newPrice) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        int row = 0;
+        // 先通过分类名找到分类id
+        int sortId = sortDao.querySpecSort(connection, newSort);
+        System.out.println(sortId);
+        Object[] params = {newName, sortId, newPrice, oldName};
+        System.out.println(oldName);
+        String sql = "update product set product_name = ?, sort_id = ?, product_price = ? where product_name = ?";
+        if (connection != null) {
+            row = database.update(connection, sql, params, row, pre);
+            database.closeConn(connection, pre, rs);
+        }
+        return row;
     }
 }

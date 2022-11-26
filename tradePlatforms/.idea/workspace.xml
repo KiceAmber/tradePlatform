@@ -10,78 +10,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27363ee-e8e6-4621-93c5-d21486b5809a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/DisplayUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/deleteSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/css/detailProduct.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/product/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/user/detailProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cabee399-9e51-40cf-8541-c2da0602272e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cabee399-9e51-40cf-8541-c2da0602272e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/DeleteProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/ModifyProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/GotoLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/GotoRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/ModifyUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/TouristLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/personal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/userInfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/images/user/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/tourist/HomePage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/user/changePersonal.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/template/user/changeProduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/common/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/AddProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/AddProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/AddSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/AddSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryProductByNameOrSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryProductByNameOrSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryUserByNameOrId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryUserByNameOrId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/Sort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/comment/CommentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/comment/CommentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/AddProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/AddSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/DisplayUserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/FileServlet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/FileServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryAllUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryProductByNameOrSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QuerySortByName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/QueryUserByNameOrId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UploadFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserLogout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/UserRegister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/controller/deleteSort.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/product/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/product/ProductDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/product/ProductDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/product/ProductDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/sort/SortDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/sort/SortDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/sort/SortDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/sort/SortDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/user/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/user/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/user/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/mysql/user/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/product/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/product/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/product/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/product/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/sort/SortService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/sort/SortService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/sort/SortServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/sort/SortServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/user/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/classes/com/kice/service/user/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/static/css/sortManage.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/static/css/sortManage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/adminAddSort.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/adminHome.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/productManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/productManage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/sortManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/sortManage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/admin/userManage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QuerySortByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QuerySortByName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryUserByNameOrId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryUserByNameOrId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/models/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/models/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/detailProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/detailProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/userInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tradePlatforms_war_exploded/template/user/userInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/AddSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/sort/AddSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/DisplayUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/DisplayUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/FileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/upload/FileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/QueryAllProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/sort/QueryAllSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryAllUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/QueryAllUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryProductByNameOrSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/product/QueryProductByNameOrSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QuerySortByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/sort/QuerySortByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/QueryUserByNameOrId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/QueryUserByNameOrId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UploadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/upload/UploadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/UserLogout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/user/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/controller/deleteSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/controller/sort/deleteSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/comment/CommentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/comment/CommentDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/product/ProductDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/sort/SortDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/sort/SortDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/sort/SortDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/sort/SortDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/mysql/user/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/service/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/product/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/service/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/product/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/service/sort/SortService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/sort/SortService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/service/sort/SortServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/sort/SortServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kice/service/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kice/service/user/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/css/sortManage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/sortManage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/admin/adminAddSort.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user/userInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/admin/adminHome.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/admin/productManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/admin/productManage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/admin/sortManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/admin/sortManage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template/admin/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/admin/userManage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/template/user/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/user/detailProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user/detailProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/user/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template/user/userInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/template/user/userInfo.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,35 +137,36 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/java/tradePlatforms/tradePlatforms/web&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.1442036&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.27014217&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Project/java/tradePlatforms/tradePlatforms/web/static/images/user",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.1442036",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "settings.editor.splitter.proportion": "0.27014217"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\user" />
-      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\images\product" />
+      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\images\user" />
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\css" />
-      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\images" />
-      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\admin" />
+      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\user" />
+      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\template\tourist" />
+      <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\images\product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web\static\css" />
@@ -167,7 +174,7 @@
       <recent name="D:\Project\java\tradePlatforms\tradePlatforms\web" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -268,6 +275,65 @@
         </option>
       </method>
     </configuration>
+    <configuration name="changePersonal.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/template/user/changePersonal.jsp" />
+      <deployment>
+        <artifact name="tradePlatforms:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/tradePlatforms_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="2eed69c9-0bca-42f3-a244-0bc926e3e807" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tradePlatforms:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Tomcat Server.changePersonal.jsp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -311,7 +377,7 @@
       <workItem from="1669362079964" duration="2548000" />
       <workItem from="1669366909570" duration="5231000" />
       <workItem from="1669385108211" duration="990000" />
-      <workItem from="1669427356921" duration="267000" />
+      <workItem from="1669427356921" duration="20660000" />
     </task>
     <servers />
   </component>

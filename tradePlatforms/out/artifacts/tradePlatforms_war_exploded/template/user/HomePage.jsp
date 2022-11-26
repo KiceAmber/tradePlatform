@@ -1,11 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: amber
-  Date: 2022/11/19
-  Time: 19:22
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 
@@ -14,18 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>二手交易市场</title>
-    <!-- 引入基础样式表 -->
+
     <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/HomePage.css">
 </head>
 <body>
-<!-- 快捷导航 -->
+
 <div class="shortcut">
     <div class="wrapper">
         <ul>
-            <li><a href="#">登录</a></li>
-            <li><a href="#">注册</a></li>
+            <li><a href="/user/info">个人中心</a></li>
         </ul>
     </div>
 </div>
@@ -81,24 +73,20 @@
     </div>
 </div>
 
-<!-- 商品 -->
-<!-- TODO: -->
 <div class="goods wrapper">
-    <c:forEach items="" var="">
+    <c:forEach items="${sort_list}" var="sort">
         <div class="hd">
-            <h2>物品</h2>
-            <a href="#">卖出该类商品</a>
+            <h2>${sort.sortName}</h2>
         </div>
         <!-- body -->
         <div class="bd clearfix">
             <ul>
-                <c:forEach items="" var="">
+                <c:forEach items="${sort.productList}" var="product" begin="0" end="3">
                     <li>
                         <a href="#">
-                            <img src="/static/images/new_goods_1.jpg" alt="">
-                            <h3>商品名称</h3>
-                            <div>￥<span>价格</span></div>
-                            <b>新品</b>
+                            <img src="${product.productImage}" alt="">
+                            <h3>${product.productName}</h3>
+                            <div>￥<span>${product.productPrice}</span></div>
                         </a>
                     </li>
                 </c:forEach>
@@ -135,5 +123,4 @@
     </div>
 </div>
 </body>
-
 </html>

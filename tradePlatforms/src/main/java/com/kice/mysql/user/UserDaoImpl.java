@@ -219,11 +219,31 @@ public class UserDaoImpl implements UserDao{
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            }finally {
-                database.closeConn(connection, pre, rs);
             }
-
         }
         return user.getUserID();
+    }
+
+    @Override
+    public int modifyUser(Connection connection,String oldName, String newName, String userPhone, String userPassword) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        int row = 0;
+        User user = new User();
+        Object[] params;
+        String sql;
+        if (userPhone.equals("")) {
+            sql = "update user set user_name = ?, user_password = ? where user_name = ?";
+            params = new Object[]{newName, userPassword, oldName};
+        } else {
+            sql = "update user set user_name = ?, user_phone = ?, user_password = ? where user_name = ?";
+            params = new Object[]{newName, userPhone, userPassword, oldName};
+        }
+
+        if (connection != null) {
+            row = database.update(connection, sql, params, row, pre);
+            database.closeConn(connection, pre, rs);
+        }
+        return row;
     }
 }

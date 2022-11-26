@@ -51,4 +51,19 @@ public class ProductServiceImpl implements ProductService{
         Connection connection = database.getConn();
         return productDao.queryByNameAndSort(connection, username, userId);
     }
+
+    @Override
+    public List<Product> queryByUserName(String userName) {
+        Connection connection = database.getConn();
+        return productDao.queryByUserName(connection, userName);
+    }
+
+    @Override
+    public boolean modifyProduct(String oldName, String newName, String newSort, String newPrice) {
+        Connection connection = database.getConn();
+        if (productDao.modifyProduct(connection, oldName, newName, newSort, newPrice) > 0) {
+            return true;
+        }
+        return false;
+    }
 }
