@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=GBK"
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="GBK"%>
 <html>
 
@@ -11,14 +12,14 @@
 
 	<div class="header">
 		<h3>欢迎来到二手交易后台管理</h3>
-		<a href="#">退出</a>
+		<a href="/user/logout">退出</a>
 	</div>
 
 	<div class="nav">
 		<ul>
-			<li id='nav1'><a href="./userManage.jsp">用户管理</a></li>
-			<li id='nav2'><a href="./productManage.jsp">商品管理<br></a></li>
-			<li id='nav3'><a href="./sortManage.jsp">商品分类管理<br></a></li>
+			<li id='nav1'><a href="/admin/queryAllUser">用户管理</a></li>
+			<li id='nav2'><a href="/admin/queryAllProduct">商品管理<br></a></li>
+			<li id='nav3'><a href="/admin/queryAllSort">商品分类管理<br></a></li>
 		</ul>
 	</div>
 
@@ -28,11 +29,9 @@
 			<p>
 		</div>
 		<div class="contend2">
-			<form>
-				分类ID:<input type="text" name="sortID" /> 
-				分类名称:<input type="text" name="sortName" />
-				 <input type="submit" value="增加" name='sortrAdd' id="add" /> 
-				 <input type="button" value="显示所有分类" name='sortShow' id="show" />
+			<form action="/admin/addSort" method="post">
+				分类名称:<input type="text" id="sortName" name="sortName"/>
+				<input type="submit" value="增加" name='addSort' id="add"/>
 			</form>
 		</div>
 		<div class="contend3">
@@ -43,17 +42,29 @@
 					<th>分类名</th>
 					<th>操作</th>
 				</tr>
+				<c:forEach items="${sort_list}" var="sort">
+					<tr>
+						<td><img src="/static/images/list.png" width="25" height="25"></td>
+						<td>${sort.getSortID()}</td>
+						<td>${sort.getSortName()}</td>
+						<td><button onclick="deleteSort()">删除</button></td>
+					</tr>
+				</c:forEach>
 				<tr>
-					<td><img src="/static/images/list.png" width="25" height="25"></td>
-					<td>1</td>
-					<td>电子产品</td>
-					<td><a href="./sortManage.jsp">删除</a></td>
-				</tr>
-				<tr>
-
 				</tr>
 			</table>
 		</div>
 	</div>
 </body>
+<script>
+	let deleteSort = function (event) {
+		let res = confirm("确认删除该分类？");
+		if (res) {
+			let tds = document.getElementsByTagName("td");
+			window.location.href = "/admin/deleteSort";
+		} else {
+			event.preventDefault();
+		}
+	}
+</script>
 </html>

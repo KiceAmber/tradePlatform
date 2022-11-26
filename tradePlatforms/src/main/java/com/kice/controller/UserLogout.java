@@ -17,7 +17,7 @@ public class UserLogout extends HttpServlet {
             req.getSession().removeAttribute(Constants.USER_SESSION);
         }
         // 跳转到登录界面
-        req.getRequestDispatcher("login.jsp").forward(req, resp);
+        req.getRequestDispatcher("/login.jsp").forward(req, resp);
     }
 
     @Override

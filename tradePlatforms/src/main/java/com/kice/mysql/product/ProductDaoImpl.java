@@ -4,6 +4,10 @@ import com.kice.models.Product;
 import com.kice.models.Sort;
 import com.kice.models.User;
 import com.kice.mysql.database;
+import com.kice.mysql.sort.SortDao;
+import com.kice.mysql.sort.SortDaoImpl;
+import com.kice.mysql.user.UserDao;
+import com.kice.mysql.user.UserDaoImpl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDaoImpl implements ProductDao{
+
+    SortDao sortDao = new SortDaoImpl();
+    UserDao userDao = new UserDaoImpl();
     @Override
     public List<Product> queryAllProduct(Connection connection) {
         PreparedStatement pre = null;
@@ -26,15 +33,19 @@ public class ProductDaoImpl implements ProductDao{
             try {
                 if(rs.next()){
                     Product product = new Product();
+                    User user = new User();
+                    Sort sort = new Sort();
+                    sort.setSortID(rs.getInt("sort_id"));
+                    user.setUserID(rs.getInt("user_id"));
                     product.setProductID(rs.getInt("product_id"));
-                    product.setSort(new Sort(rs.getInt("sort_id")));
-                    product.setUser(new User(rs.getInt("user_id")));
+                    product.setSort(sort);
+                    product.setUser(user);
                     product.setProductName(rs.getString("product_name"));
                     product.setProductPrice(rs.getInt("product_price"));
                     product.setProductImage(rs.getString("product_image"));
                     product.setProductCommentCount(rs.getInt("product_comment_count"));
-                    product.setProductViewCount(rs.getInt("product_view_count"));
                     productList.add(product);
+                    System.out.println(product);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -47,14 +58,17 @@ public class ProductDaoImpl implements ProductDao{
     }
 
     @Override
-    public int addProduct(Connection connection, Product product) {
+    public int addProduct(Connection connection, String sortName, String userName,String productName, int productPrice, String productImage) {
+        // 查询到分类对应的ID
+        int sortId = sortDao.querySpecSort(connection, sortName);
+        // 查询到用户对应的ID
+        int userId = userDao.querySpecUser(connection, userName);
         PreparedStatement pre = null;
         ResultSet rs = null;
-        Object[] params = {product.getProductID(), product.getSort().getSortID(), product.getUser().getUserID(),
-                            product.getProductName(), product.getProductPrice(), product.getProductImage(),
-                              product.getProductCommentCount(), product.getProductViewCount()};
+        Object[] params = {sortId, userId, productName, productPrice, productImage};
         int row = 0;
-        String sql = "insert into tradeplatform.product() values(?, ?, ?, ?, ?, ?, ?, ?)";
+
+        String sql = "insert into tradeplatform.product(sort_id, user_id, product_name, product_price, product_image) values(?, ?, ?, ?, ?)";
         if (connection != null) {
             row = database.update(connection, sql, params, row, pre);
             database.closeConn(connection, pre, rs);
@@ -92,7 +106,6 @@ public class ProductDaoImpl implements ProductDao{
                     product.setProductPrice(rs.getInt("product_price"));
                     product.setProductImage(rs.getString("product_image"));
                     product.setProductCommentCount(rs.getInt("product_comment_count"));
-                    product.setProductViewCount(rs.getInt("product_view_count"));
                     productList.add(product);
                 }
             } catch (SQLException e) {
@@ -121,7 +134,6 @@ public class ProductDaoImpl implements ProductDao{
                     product.setProductPrice(rs.getInt("product_price"));
                     product.setProductImage(rs.getString("product_image"));
                     product.setProductCommentCount(rs.getInt("product_comment_count"));
-                    product.setProductViewCount(rs.getInt("product_view_count"));
                     productList.add(product);
                 }
             } catch (SQLException e) {
@@ -151,7 +163,6 @@ public class ProductDaoImpl implements ProductDao{
                     product.setProductPrice(rs.getInt("product_price"));
                     product.setProductImage(rs.getString("product_image"));
                     product.setProductCommentCount(rs.getInt("product_comment_count"));
-                    product.setProductViewCount(rs.getInt("product_view_count"));
                     productList.add(product);
                 }
             } catch (SQLException e) {

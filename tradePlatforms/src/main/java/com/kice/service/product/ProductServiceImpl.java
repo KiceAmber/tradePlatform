@@ -27,7 +27,8 @@ public class ProductServiceImpl implements ProductService{
     public boolean addProduct(Product product) {
         boolean flag = false;
         Connection connection = database.getConn();
-        if (productDao.addProduct(connection, product) > 0) {
+        if (productDao.addProduct(connection, product.getSort().getSortName(), product.getUser().getUserName(),
+                product.getProductName(), product.getProductPrice(), product.getProductImage()) > 0) {
             flag = true;
         }
         return flag;

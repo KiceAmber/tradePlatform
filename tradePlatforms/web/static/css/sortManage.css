@@ -95,13 +95,13 @@ body {
 	background-color: lightblue;
 }
 
-#add {
+#add query {
 	background-color: rgb(72, 72, 247);
 	border: none;
 	color: white;
 	padding: 10px 20px;
 	text-decoration: none;
-	margin: 2px px;
+	margin: 2px 2px;
 	cursor: pointer;
 	margin-left: 10%;
 }

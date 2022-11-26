@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>二手交易系统</title>
-    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
 <div class="loginBox">

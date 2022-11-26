@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: amber
-  Date: 2022/11/19
-  Time: 19:22
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 
@@ -13,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>二手交易市场</title>
-    <!-- 引入基础样式表 -->
+
     <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/HomePage.css">
 </head>
 <body>
-<!-- 快捷导航 -->
+
 <div class="shortcut">
     <div class="wrapper">
         <ul>
@@ -40,7 +34,6 @@
         <span>数量</span>
     </div>
 </div>
-
 
 <!-- banner -->
 <div class="banner">
@@ -81,134 +74,26 @@
     </div>
 </div>
 
-<!-- 商品 -->
 <div class="goods wrapper">
-    <!-- hd header 头部 -->
-    <div class="hd">
-        <h2>物品<span>物品</span></h2>
-        <a href="#">卖出该类商品</a>
-    </div>
-    <!-- body -->
-    <div class="bd clearfix">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/ew_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- header -->
-    <div class="hd">
-        <h2>物品<span>物品</span></h2>
-        <a href="#">卖出该类商品</a>
-    </div>
-    <!-- body -->
-    <div class="bd clearfix">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- header -->
-    <<div class="hd">
-    <h2>物品<span>物品</span></h2>
-    <a href="#">卖出该类商品</a>
-</div>
-    <!-- body -->
-    <div class="bd clearfix">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/static/images/new_goods_1.jpg" alt="">
-                    <h3>商品名称</h3>
-                    <div>￥<span>价格</span></div>
-                    <b>新品</b>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <c:forEach items="${sort_list}" var="sort">
+        <div class="hd">
+            <h2>${sort.sortName}</h2>
+        </div>
+        <!-- body -->
+        <div class="bd clearfix">
+            <ul>
+                <c:forEach items="${sort.productList}" var="product">
+                    <li>
+                        <a href="#">
+                            <img src="${product.productImage}" alt="">
+                            <h3>${product.productName}</h3>
+                            <div>￥<span>${product.productPrice}</span></div>
+                        </a>
+                    </li>
+                </c:forEach>
+            </ul>
+        </div>
+    </c:forEach>
 </div>
 
 <!-- 最后区域 -->

@@ -1,6 +1,3 @@
-<%@ page import="com.kice.models.User" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.kice.common.Constants" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
@@ -13,15 +10,15 @@
 <body>
 	<div class="header">
 		<h3>欢迎来到二手交易后台管理</h3>
-		<a href="#">退出</a>
+		<a href="/user/logout">退出</a>
 
 	</div>
 
 	<div class="nav">
 		<ul>
-			<li id='nav1'><a href="./userManage.jsp">用户管理</a></li>
-			<li id='nav2'><a href="./productManage.jsp">商品管理<br></a></li>
-			<li id='nav3'><a href="./sortManage.jsp">商品分类管理<br></a></li>
+			<li id='nav1'><a href="/admin/queryAllUser">用户管理</a></li>
+			<li id='nav2'><a href="/admin/queryAllProduct">商品管理<br></a></li>
+			<li id='nav3'><a href="/admin/queryAllSort">商品分类管理<br></a></li>
 		</ul>
 	</div>
 

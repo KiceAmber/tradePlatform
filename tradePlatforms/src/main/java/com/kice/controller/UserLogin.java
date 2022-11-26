@@ -1,7 +1,13 @@
 package com.kice.controller;
 
 import com.kice.common.Constants;
+import com.kice.models.Product;
+import com.kice.models.Sort;
 import com.kice.models.User;
+import com.kice.service.product.ProductService;
+import com.kice.service.product.ProductServiceImpl;
+import com.kice.service.sort.SortService;
+import com.kice.service.sort.SortServiceImpl;
 import com.kice.service.user.UserService;
 import com.kice.service.user.UserServiceImpl;
 
@@ -18,6 +24,16 @@ public class UserLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService userService = new UserServiceImpl();
+        SortService sortService = new SortServiceImpl();
+        ProductService productService = new ProductServiceImpl();
+        // 获取商品信息
+        List<Sort> sortList = new ArrayList<>();
+        sortList = sortService.queryAllSort();
+        for (Sort sort : sortList) {
+            List<Product> productList;
+            productList = productService.queryBySort(sort.getSortName());
+            sort.setProductList(productList);
+        }
 
         // 获取用户名和密码
         String path;
@@ -34,7 +50,9 @@ public class UserLogin extends HttpServlet {
             } else {
                 path = "/template/user/HomePage.jsp";
             }
+
             req.getSession().setAttribute(Constants.USER_SESSION, user);
+            req.getSession().setAttribute(Constants.SORT_LIST, sortList);
             // 重定向跳转到主页面
             resp.sendRedirect(path);
         } else {

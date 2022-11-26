@@ -200,8 +200,30 @@ public class UserDaoImpl implements UserDao{
             }finally {
                 database.closeConn(connection, pre, rs);
             }
-
         }
         return userList;
+    }
+
+    @Override
+    public int querySpecUser(Connection connection, String userName) {
+        PreparedStatement pre = null;
+        ResultSet rs = null;
+        User user = new User();
+        Object[] params = {userName};
+        String sql = "select * from tradeplatform.user where user_name = ?";
+        if (connection != null) {
+            rs = database.execute(connection, sql, params, rs, pre);
+            try {
+                while(rs.next()) {
+                    user.setUserID(rs.getInt("user_id"));
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                database.closeConn(connection, pre, rs);
+            }
+
+        }
+        return user.getUserID();
     }
 }

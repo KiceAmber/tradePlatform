@@ -90,7 +90,7 @@
     <!-- 管理员查询所有分类-->
     <servlet>
         <servlet-name>queryAllSort</servlet-name>
-        <servlet-class>com.kice.controller.QueryAllProduct</servlet-class>
+        <servlet-class>com.kice.controller.QueryAllSort</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>queryAllSort</servlet-name>
@@ -100,34 +100,44 @@
     <!-- 管理员查询分类-->
     <servlet>
         <servlet-name>querySort</servlet-name>
-        <servlet-class>com.kice.controller.QueryProductByNameOrSort</servlet-class>
+        <servlet-class>com.kice.controller.QuerySortByName</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>querySort</servlet-name>
         <url-pattern>/admin/querySort</url-pattern>
     </servlet-mapping>
 
+    <!-- 个人中心跳转-->
+    <servlet>
+        <servlet-name>userInfo</servlet-name>
+        <servlet-class>com.kice.controller.DisplayUserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userInfo</servlet-name>
+        <url-pattern>/user/info</url-pattern>
+    </servlet-mapping>
+
+    <!-- 添加分类-->
+    <servlet>
+        <servlet-name>addSort</servlet-name>
+        <servlet-class>com.kice.controller.AddSort</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addSort</servlet-name>
+        <url-pattern>/admin/addSort</url-pattern>
+    </servlet-mapping>
+
+    <!-- 删除分类-->
+    <servlet>
+        <servlet-name>delSort</servlet-name>
+        <servlet-class>com.kice.controller.deleteSort</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delSort</servlet-name>
+        <url-pattern>/admin/deleteSort</url-pattern>
+    </servlet-mapping>
 
 
-<!--    &lt;!&ndash; 用户添加商品&ndash;&gt;-->
-<!--    <servlet>-->
-<!--        <servlet-name>addProduct</servlet-name>-->
-<!--        <servlet-class>com.kice.controller.AddProduct</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>addProduct</servlet-name>-->
-<!--        <url-pattern>user/addProduct</url-pattern>-->
-<!--    </servlet-mapping>-->
-
-    <!-- 用户查询自己的所有商品-->
-    <!--    <servlet>-->
-    <!--        <servlet-name>queryOwnerProduct</servlet-name>-->
-    <!--        <servlet-class></servlet-class>-->
-    <!--    </servlet>-->
-    <!--    <servlet-mapping>-->
-    <!--        <servlet-name>queryOwnerProduct</servlet-name>-->
-    <!--        <url-pattern>user/ownerProduct</url-pattern>-->
-    <!--    </servlet-mapping>-->
 
 
 

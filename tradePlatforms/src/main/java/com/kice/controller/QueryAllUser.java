@@ -16,9 +16,10 @@ public class QueryAllUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService userService = new UserServiceImpl();
-        List<User> userList = new ArrayList<>();
+        List<User> userList;
         userList = userService.queryAllUser();
         req.setAttribute("userList", userList);
+        req.getRequestDispatcher("/template/admin/userManage.jsp").forward(req, resp);
     }
 
     @Override

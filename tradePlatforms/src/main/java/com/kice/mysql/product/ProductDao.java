@@ -1,6 +1,7 @@
 package com.kice.mysql.product;
 
 import com.kice.models.Product;
+import com.kice.models.Sort;
 
 import java.sql.Connection;
 import java.util.List;
@@ -15,9 +16,9 @@ public interface ProductDao {
     /**
      * 添加商品
      * @param connection 数据库连接
-     * @param product 商品
+     *
      */
-    int addProduct(Connection connection, Product product);
+    int addProduct(Connection connection, String sortName, String userName,String productName, int productPrice, String productImage);
 
     /**
      * 修改商品信息

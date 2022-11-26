@@ -56,4 +56,9 @@ public interface UserDao {
      * 根据用户ID和用户名查询用户
      */
     List<User> queryUserByNameAndId(Connection connection, String userName, String userId);
+
+    /**
+     * 根据用户名查询具体ID
+     */
+    int querySpecUser(Connection connection, String userName);
 }

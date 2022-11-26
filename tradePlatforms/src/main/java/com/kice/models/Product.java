@@ -1,5 +1,7 @@
 package com.kice.models;
 
+import java.util.List;
+
 public class Product {
 
     private int productID; // 商品ID
@@ -9,12 +11,13 @@ public class Product {
     private int productPrice; // 产品价格
     private String productImage; // 产品图片
     private int productCommentCount; // 商品评论数量
-    private int productViewCount; // 商品浏览量
+
+    private List<Comment> commentList; // 商品下的评论
 
     public Product() {
     }
 
-    public Product(int productID, Sort sort, User user, String productName, int productPrice, String productImage, int productCommentCount, int productViewCount) {
+    public Product(int productID, Sort sort, User user, String productName, int productPrice, String productImage, int productCommentCount, List<Comment> commentList) {
         this.productID = productID;
         this.sort = sort;
         this.user = user;
@@ -22,7 +25,8 @@ public class Product {
         this.productPrice = productPrice;
         this.productImage = productImage;
         this.productCommentCount = productCommentCount;
-        this.productViewCount = productViewCount;
+
+        this.commentList = commentList;
     }
 
     public int getProductID() {
@@ -81,14 +85,6 @@ public class Product {
         this.productCommentCount = productCommentCount;
     }
 
-    public int getProductViewCount() {
-        return productViewCount;
-    }
-
-    public void setProductViewCount(int productViewCount) {
-        this.productViewCount = productViewCount;
-    }
-
     @Override
     public String toString() {
         return "Product{" +
@@ -99,7 +95,7 @@ public class Product {
                 ", productPrice=" + productPrice +
                 ", productImage='" + productImage + '\'' +
                 ", productCommentCount=" + productCommentCount +
-                ", productViewCount=" + productViewCount +
+                ", commentList=" + commentList +
                 '}';
     }
 }

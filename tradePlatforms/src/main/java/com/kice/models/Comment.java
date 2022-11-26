@@ -7,20 +7,16 @@ public class Comment {
     private User user; // 发表评论用户
     private Product product; // 评论所属商品
     private int commentContent; // 评论内容
-    private int commentParentID; // 评论父ID
-    private int commentLikeCount; // 评论点赞数量
     private Date commentDate; // 评论日期
 
     public Comment() {
     }
 
-    public Comment(int commentID, User user, Product product, int commentContent, int commentParentID, int commentLikeCount, Date commentDate) {
+    public Comment(int commentID, User user, Product product, int commentContent, Date commentDate) {
         this.commentID = commentID;
         this.user = user;
         this.product = product;
         this.commentContent = commentContent;
-        this.commentParentID = commentParentID;
-        this.commentLikeCount = commentLikeCount;
         this.commentDate = commentDate;
     }
 
@@ -56,22 +52,6 @@ public class Comment {
         this.commentContent = commentContent;
     }
 
-    public int getCommentParentID() {
-        return commentParentID;
-    }
-
-    public void setCommentParentID(int commentParentID) {
-        this.commentParentID = commentParentID;
-    }
-
-    public int getCommentLikeCount() {
-        return commentLikeCount;
-    }
-
-    public void setCommentLikeCount(int commentLikeCount) {
-        this.commentLikeCount = commentLikeCount;
-    }
-
     public Date getCommentDate() {
         return commentDate;
     }
@@ -87,8 +67,6 @@ public class Comment {
                 ", user=" + user +
                 ", product=" + product +
                 ", commentContent=" + commentContent +
-                ", commentParentID=" + commentParentID +
-                ", commentLikeCount=" + commentLikeCount +
                 ", commentDate=" + commentDate +
                 '}';
     }
